@@ -51,7 +51,7 @@ export async function searchPosts(search: string ) {
   // 条件に合う投稿を取得
   return await prisma.post.findMany({
     where: {
-      And: filters
+      AND: filters
     },
     include: {
       author: {
